@@ -1,11 +1,17 @@
 <?php 
 session_start();
-$con=mysqli_connect('localhost','root','','company');
+//$con=mysqli_connect('localhost','root','','company');
+$con=mysqli_connect('localhost','root','','bankdb');
 
-$q="select * from user ";
+// $q="select * from user ";
+// $q="select * from bank ";//Test1
+$q = "SELECT * FROM `bank`  \n"
+
+    . "ORDER BY `bank`.`Name`  ASC";
+
 $result=mysqli_query($con,$q);
 $row_count=mysqli_num_rows($result);
-//echo $_SESSION['name'];
+//echo $_SESSION['Name'];//Commented
 
 ?>
 <html>
@@ -31,9 +37,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
 		</tr>
@@ -42,9 +48,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -53,9 +59,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -64,9 +70,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -75,9 +81,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -86,9 +92,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -97,9 +103,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -108,9 +114,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -119,9 +125,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -130,9 +136,9 @@ $row_count=mysqli_num_rows($result);
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
         </tr>
@@ -147,7 +153,7 @@ $row_count=mysqli_num_rows($result);
         <div class="css-button" >
                   <p class="css-button-text">Home</p>
                   <div class="css-button-inner">
-                  <a href="index.php" >
+                  <a href="Index.php" >
                   <div class="reset-skew">
                   <p class="css-button-inner-text">Home</p>
                 </div></a>

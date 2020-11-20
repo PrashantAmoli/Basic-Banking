@@ -6,9 +6,9 @@
 <body >
 <div id="header">
        <br>
-       <h1 style=" font-family:Agency FB; font-size: 70px  ; "> Sparks Foundation Internship Project </h1>
-       <br>
-       <h2 style=" font-family:Agency FB; font-size: 55px  ; "> BASIC BANKING SYSTEM </h2>
+       <h1 style=" font-family:Agency FB; font-size: 55px  ; ">The Sparks Foundation</h1>
+       <h2 style=" font-family:Agency FB; font-size: 45px  ; ">Internship Project</h2>
+       <h2 style=" font-family:Agency FB; font-size: 40px  ; ">Basic Banking System</h2>
         </div>
         <div id="section">
             <table>
@@ -18,7 +18,7 @@
                 <div class="css-button" >
                   <p class="css-button-text">View Users</p>
                   <div class="css-button-inner">
-                  <a href="getdetail.php" >
+                  <a href="GetInfo.php" >
                   <div class="reset-skew">
                   <p class="css-button-inner-text">View Users</p>
                 </div></a>
@@ -31,7 +31,7 @@
                <div class="css-button" >
                  <p class="css-button-text">Credit Transfer</p>
                  <div class="css-button-inner">
-                 <a href="selectuser.php" >
+                 <a href="SelectUsers.php" >
                  <div class="reset-skew">
                  <p class="css-button-inner-text">Credit Transfer</p>
                </div></a>

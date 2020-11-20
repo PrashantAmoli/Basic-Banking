@@ -1,12 +1,16 @@
 <?php 
 session_start();
-$con=mysqli_connect('localhost','root','','company');
-$name=$_POST['name'];
-$q="select * from user where name='$name'";
+// $con=mysqli_connect('localhost','root','','company');
+$con=mysqli_connect('localhost','root','','bankdb');
+
+$Name=$_POST['Name'];
+// $q="select * from user where name='$name'";
+$q="select * from bank where Name='$Name'";
+
 $result=mysqli_query($con,$q);
 $row_count=mysqli_num_rows($result);
-$_SESSION['name']=$name;
-//echo $_SESSION['name'];
+$_SESSION['Name'] = $Name;
+echo $_SESSION['Name'];//commented
 
 ?>
 <html>
@@ -30,9 +34,9 @@ $_SESSION['name']=$name;
      
      $row=mysqli_fetch_array($result);
            ?>
- <td><?php echo  $row["name"]; ?></td>
-  <td><?php echo  $row["email"]; ?></td>
-  <td><?php echo  $row["credit"]; ?></td>
+ <td><?php echo  $row["Name"]; ?></td>
+  <td><?php echo  $row["Email"]; ?></td>
+  <td><?php echo  $row["Credit"]; ?></td>
    
 
            </tr>
@@ -45,7 +49,7 @@ $_SESSION['name']=$name;
         <div class="css-button" >
                  <p class="css-button-text">Transfer To</p>
                  <div class="css-button-inner">
-                 <a href="viewuser.php" >
+                 <a href="ViewUser.php" >
                  <div class="reset-skew">
                  <p class="css-button-inner-text">Transfer To</p>
                </div></a>

@@ -1,10 +1,16 @@
 <?php
 session_start();
-$con=mysqli_connect('localhost','root','','company');
-//mysqli_select_db($con,'test');
-$q="select name from user";
+// $con=mysqli_connect('localhost','root','','company');
+$con=mysqli_connect('localhost','root','','bankdb');
+
+// mysqli_select_db($con,'test');//commented
+mysqli_select_db($con,'bank');//
+
+// $q="select name from user";
+$q = "SELECT Name FROM `bank`  \n";
+
 $result=mysqli_query($con,$q);
-//echo $_POST["transfer"];
+echo $_POST["transfer"];//commented
 $_SESSION['to']=$_POST["transfer"];
 ?>
 <html>
@@ -37,7 +43,7 @@ $_SESSION['to']=$_POST["transfer"];
     </style>
     </head>
     <body>
-     <form action="checkcredit.php" method="post"  style="position: relative; top:20%; ">
+     <form action="CreditCheck.php" method="post"  style="position: relative; top:20%; ">
           <div class="view">
               <strong>Transfer Amount:</strong>
           <br>
