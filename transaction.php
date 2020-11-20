@@ -10,7 +10,7 @@ mysqli_select_db($con,'bank');//
 $q = "SELECT Name FROM `bank`  \n";
 
 $result=mysqli_query($con,$q);
-echo $_POST["transfer"];//commented
+// echo $_POST["transfer"];//commented
 $_SESSION['to']=$_POST["transfer"];
 ?>
 <html>

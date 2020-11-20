@@ -10,7 +10,7 @@ $q="select * from bank where Name='$Name'";
 $result=mysqli_query($con,$q);
 $row_count=mysqli_num_rows($result);
 $_SESSION['Name'] = $Name;
-echo $_SESSION['Name'];//commented
+// echo $_SESSION['Name'];//commented
 
 ?>
 <html>
