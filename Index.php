@@ -7,8 +7,8 @@
 <div id="header">
        <br>
        <h1 style=" font-family:Agency FB; font-size: 55px  ; ">The Sparks Foundation</h1>
-       <h2 style=" font-family:Agency FB; font-size: 45px  ; ">Internship Project</h2>
-       <h2 style=" font-family:Agency FB; font-size: 40px  ; ">Basic Banking System</h2>
+       <h2 style=" font-family:Agency FB; font-size: 45px  ; ">Internship Project  </h2>
+       <h2 style=" font-family:Agency FB; font-size: 40px  ; ">Basic Banking System   </h2>
         </div>
         <div id="section">
             <table>
